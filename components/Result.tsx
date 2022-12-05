@@ -23,7 +23,7 @@ export function Index({ result, error, loading, sendMessage }: Props) {
       </div>
     );
   }
-  if (result?.data.products.edges.length === 0) {
+  if (result?.data?.products?.edges?.length === 0) {
     return (
       <div className="flex items-center justify-center h-full">
         <p>検索結果が見つかりません</p>
@@ -32,7 +32,7 @@ export function Index({ result, error, loading, sendMessage }: Props) {
   }
   return (
     <ul>
-      {result?.data.products.edges.map((item: Item) => (
+      {result?.data?.products?.edges?.map((item: Item) => (
         <li
           key={item.node.id}
           className="flex p-4 hover:bg-violet-100 hover:cursor-pointer border-4 border-transparent hover:border-violet-400"

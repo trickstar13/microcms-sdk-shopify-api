@@ -36,7 +36,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
               currencyCode
             }
           }
-          images(first: 1, maxWidth:400) {
+          images(first: 1) {
             edges {
               node {
                 originalSrc
@@ -51,7 +51,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   }`;
 
-  fetch(`https://${shopifyDomain}/api/2020-10/graphql.json`, {
+  fetch(`https://${shopifyDomain}/api/2022-10/graphql.json`, {
     method: "POST",
     headers: {
       "Content-Type": "application/graphql",

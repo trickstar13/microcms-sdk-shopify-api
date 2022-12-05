@@ -27,6 +27,7 @@ const Home: NextPage = () => {
 
   const [query, setQuery] = useState<string>("");
   const [result, error, loading, search] = useSearch(query);
+  // console.log(result);
   const onKeyDown = useCallback(
     (e: { keyCode: number }) => {
       if (e.keyCode === 13) {
